@@ -1,12 +1,16 @@
-## Welcome to My Repo
+## Contact List
 
-> I am your Readme.md file, you should probably update me.
+#### Creating an online contact form / persisting list
+
+> Using Backbone models and collections
 
 
 ## Usage
 
-This template contains some simple `gulp` tasks. They are as follows:
+- npm install
+- bower install
 
+This template contains some simple `gulp` tasks. They are as follows:
 
 - `gulp watch`: This will launch a Node Server and start the standard `watchlist` task
 - `gulp bower`: This will move the bower components into their proper location. This will run during the `watch` task, but you may need to run it manually once in a while
