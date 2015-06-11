@@ -1,0 +1,38 @@
+@import "../css/vendor/bourbon/bourbon";
+@import "../css/vendor/neat/neat";
+
+/* DECLARATIONS
+---------------- */
+
+
+
+/* MIXINS
+---------- */
+
+
+
+/* GLOBAL STYLES
+---------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  min-width: 310px;
+  max-width: 100%;
+}
+
+input, button {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+
+@import "_small";
+@import "_medium";

@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* DECLARATIONS
+---------------- */
+/* MIXINS
+---------- */
+/* GLOBAL STYLES
+---------------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 62.5%;
+  min-width: 310px;
+  max-width: 100%; }
+
+input, button {
+  border: none; }
+  input:focus, button:focus {
+    outline: none; }
