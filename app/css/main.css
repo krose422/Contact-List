@@ -64,7 +64,7 @@ header {
       color: #844862; }
       header .logo h2 i {
         font-size: .5em;
-        padding-right: 15px; }
+        padding-right: .5em; }
   header .headtext {
     display: inline-block;
     float: right; }
@@ -121,7 +121,7 @@ header {
     clear: both; }
     .nameList ul li {
       margin: 0;
-      padding: 10px;
+      padding: .5em;
       cursor: pointer;
       transition: .15s all ease; }
       .nameList ul li:hover {
@@ -146,40 +146,72 @@ header {
   height: 80%;
   color: #844862; }
 
-/* Contact Info Form
---------------------- */
-.form {
+/* RIGHT PAGE
+-------------- */
+.rightpage {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  padding-top: 10px; }
-  .form:last-child {
+  width: 74.41059%; }
+  .rightpage:last-child {
     margin-right: 0; }
+
+/* Contact Info Form
+--------------------- */
+.form {
+  padding-top: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  .form::after {
+    clear: both;
+    content: "";
+    display: table; }
   .form form {
+    width: 100%;
     margin: auto; }
     .form form h4 {
-      font-size: 2em; }
+      font-size: 2em;
+      width: 100%; }
     .form form .name {
-      display: inline-block;
       float: left;
-      margin-right: 15px; }
-    .form form .mobile {
-      display: inline-block;
-      float: left;
-      margin-right: 15px; }
-    .form form .address {
-      display: inline-block;
-      float: left;
-      margin-right: 15px; }
-    .form form input {
       display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .form form .name:last-child {
+        margin-right: 0; }
+    .form form .mobile {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .form form .mobile:last-child {
+        margin-right: 0; }
+    .form form .address {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .form form .address:last-child {
+        margin-right: 0; }
+    .form form .web {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-right: 0; }
+      .form form .web:last-child {
+        margin-right: 0; }
+    .form form input {
       border: 1px solid #D9D7C5;
-      border-radius: 4px;
-      padding: 5px;
+      border-radius: .3em;
+      padding: 7px;
       font-size: 1.5em;
-      margin-bottom: 15px;
-      width: 15em; }
+      margin-bottom: 1em;
+      width: 100%;
+      color: #844862; }
     .form form button {
       margin: auto;
       border-radius: 4px;
@@ -198,3 +230,13 @@ header {
         color: white;
         padding: .8em;
         width: 11em; }
+
+/* SELECTED CONTACT
+-------------------- */
+.selectedContact {
+  width: 90%;
+  height: 40em;
+  margin: auto;
+  border: 1px solid #D9D7C5;
+  border-radius: .3em;
+  clear: both; }

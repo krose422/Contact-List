@@ -19,13 +19,13 @@ $darkergrey: #47403F;
 
 @mixin border ($color) {
   border: 1px solid $color;
-  border-radius: 4px;
+  border-radius: .3em;
 }
 
 @mixin inputs () {
   display: inline-block;
   float: left;
-  margin-right: 15px;
+  margin-right: 1em;
 }
 
 @mixin transition () {
@@ -97,7 +97,7 @@ header {
 
       i {
         font-size: .5em;
-        padding-right: 15px;
+        padding-right: .5em;
       }
     }
 
@@ -153,8 +153,6 @@ header {
     }
   }
 
-
-
   p {
     color: $offwhite;
     font-size: 1.5em;
@@ -174,7 +172,7 @@ header {
 
     li {
       margin: 0;
-      padding: 10px;
+      padding: .5em;
       cursor: pointer;
       @include transition;
 
@@ -212,41 +210,64 @@ header {
   }
 }
 
+/* RIGHT PAGE
+-------------- */
+
+.rightpage {
+  @include span-columns(9);
+}
 
 /* Contact Info Form
 --------------------- */
 
 .form {
-  @include span-columns(8);
-  padding-top: 10px;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+  @include outer-container(90%);
+
 
   form {
-    // width: 60%;
+    width: 100%;
     margin: auto;
 
     h4 {
       font-size: 2em;
+      @include fill-parent();
     }
 
     .name {
-      @include inputs;
+      @include span-columns(3);
+      // @include inputs;
     }
 
     .mobile {
-      @include inputs;
+      @include span-columns(3);
+
+      // @include inputs;
     }
 
     .address {
-      @include inputs;
+      @include span-columns(3);
+
+      // @include inputs;
+    }
+
+    .web {
+      @include span-columns(3);
+      @include omega();
+
+      // @include inputs;
     }
 
     input {
-      display: block;
+      // display: block;
       @include border($grey);
-      padding: 5px;
+      padding: 7px;
       font-size: 1.5em;
-      margin-bottom: 15px;
-      width: 15em;
+      margin-bottom: 1em;
+      width: 100%;
+      color: $purple;
     }
     button {
       margin: auto;
@@ -270,6 +291,17 @@ header {
       }
     }
   }
+}
+
+/* SELECTED CONTACT
+-------------------- */
+
+.selectedContact {
+  width: 90%;
+  height: 40em;
+  margin: auto;
+  @include border($grey);
+  clear: both;
 }
 
 
