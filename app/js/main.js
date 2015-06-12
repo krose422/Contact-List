@@ -45,6 +45,8 @@ var addContact = function (e) {
   });
 
   this.reset();
+  $('#firstName').focus();
+
 };
 
 // Add contact function
@@ -77,8 +79,6 @@ var populateSC = function () {
 
   allContacts.each( function (contact) {
     if (idToPopulate === contact.id) {
-      var scTemplate = template.contactInfo(contact);
-      $('.selectedContact').empty();
       $('.selectedContact').html(template.contactInfo(contact.toJSON()));
     }
   });

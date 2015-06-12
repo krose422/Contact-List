@@ -15,11 +15,11 @@
               </div>
 
               <div class="email" id="sc-email">
-                <p><strong>Email address: </strong><a href="#">{{email}}</a></p>
+                <p><strong>Email address: </strong><a href="mailto:{{email}}">{{email}}</a></p>
               </div>
 
               <div class="sc-website">
-                <p><strong>Website: </strong><a href="#">{{website}}</a></p>
+                <p><strong>Website: </strong><a href="http://{{website}}" target="_blank">{{website}}</a></p>
               </div>
             </div> <!-- end div topright -->
 
@@ -29,10 +29,13 @@
 
             <div class="sc-bottomleft">
               <div class="sc-address" id="sc-address">
-                <p>{{addressOne}}</p>
+                <p>Address: {{addressOne}}</p>
                 <p>{{addressTwo}}</p>
               </div>
 
+              <div class="sc-notes" id="sc-notes">
+                <p>Additional notes: {{notes}}</p>
+              </div>
 
             </div> <!-- end sc-bottomleft div -->
 

@@ -10,15 +10,21 @@ this["template"]["contactInfo"] = Handlebars.template({"compiler":[6,">= 2.0.0-b
     + alias3(((helper = (helper = helpers.lastName || (depth0 != null ? depth0.lastName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lastName","hash":{},"data":data}) : helper)))
     + "</p>\n          </div>\n\n          <div class=\"sc-top\">\n\n            <div class=\"sc-avatar\" id=\"sc-avatar\">\n              <img src=\"images/User.png\">\n            </div>\n\n            <div class=\"sc-topright\">\n              <div class=\"phone\" id=\"sc-phone\">\n                <p><strong>Phone Number: </strong>"
     + alias3(((helper = (helper = helpers.phone || (depth0 != null ? depth0.phone : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phone","hash":{},"data":data}) : helper)))
-    + "</p>\n              </div>\n\n              <div class=\"email\" id=\"sc-email\">\n                <p><strong>Email address: </strong><a href=\"#\">"
+    + "</p>\n              </div>\n\n              <div class=\"email\" id=\"sc-email\">\n                <p><strong>Email address: </strong><a href=\"mailto:"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
-    + "</a></p>\n              </div>\n\n              <div class=\"sc-website\">\n                <p><strong>Website: </strong><a href=\"#\">"
+    + "\">"
+    + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
+    + "</a></p>\n              </div>\n\n              <div class=\"sc-website\">\n                <p><strong>Website: </strong><a href=\"http://"
     + alias3(((helper = (helper = helpers.website || (depth0 != null ? depth0.website : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"website","hash":{},"data":data}) : helper)))
-    + "</a></p>\n              </div>\n            </div> <!-- end div topright -->\n\n          </div> <!-- end div sc-top -->\n\n          <div class=\"sc-bottom\">\n\n            <div class=\"sc-bottomleft\">\n              <div class=\"sc-address\" id=\"sc-address\">\n                <p>"
+    + "\" target=\"_blank\">"
+    + alias3(((helper = (helper = helpers.website || (depth0 != null ? depth0.website : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"website","hash":{},"data":data}) : helper)))
+    + "</a></p>\n              </div>\n            </div> <!-- end div topright -->\n\n          </div> <!-- end div sc-top -->\n\n          <div class=\"sc-bottom\">\n\n            <div class=\"sc-bottomleft\">\n              <div class=\"sc-address\" id=\"sc-address\">\n                <p>Address: "
     + alias3(((helper = (helper = helpers.addressOne || (depth0 != null ? depth0.addressOne : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressOne","hash":{},"data":data}) : helper)))
     + "</p>\n                <p>"
     + alias3(((helper = (helper = helpers.addressTwo || (depth0 != null ? depth0.addressTwo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressTwo","hash":{},"data":data}) : helper)))
-    + "</p>\n              </div>\n\n\n            </div> <!-- end sc-bottomleft div -->\n\n            <div class=\"googlemap\">\n\n            </div>\n\n          </div> <!-- end sc-bottom div -->\n\n          <div id=\"delete\" class=\"delete\">\n            <span>Delete Contact</span>\n          </div>\n        </div>\n";
+    + "</p>\n              </div>\n\n              <div class=\"sc-notes\" id=\"sc-notes\">\n                <p>Additional notes: "
+    + alias3(((helper = (helper = helpers.notes || (depth0 != null ? depth0.notes : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"notes","hash":{},"data":data}) : helper)))
+    + "</p>\n              </div>\n\n            </div> <!-- end sc-bottomleft div -->\n\n            <div class=\"googlemap\">\n\n            </div>\n\n          </div> <!-- end sc-bottom div -->\n\n          <div id=\"delete\" class=\"delete\">\n            <span>Delete Contact</span>\n          </div>\n        </div>\n";
 },"useData":true});
 this["template"] = this["template"] || {};
 this["template"]["nameList"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
