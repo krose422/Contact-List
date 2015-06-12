@@ -61,13 +61,7 @@ input, button {
   width: 100%;
 }
 
-/* MAIN CONTENT
----------------- */
 
-.main {
-  width: 100%;
-  @include outer-container(100%);
-}
 
 /* HEADER
 ---------- */
@@ -113,6 +107,14 @@ header {
       color: $darkgrey;
     }
   }
+}
+
+/* MAIN CONTENT
+---------------- */
+
+.main {
+  width: 100%;
+  @include outer-container(100%);
 }
 
 /* NAME LIST LEFT SIDEBAR
@@ -238,26 +240,19 @@ header {
 
     .name {
       @include span-columns(3);
-      // @include inputs;
     }
 
     .mobile {
       @include span-columns(3);
-
-      // @include inputs;
     }
 
     .address {
       @include span-columns(3);
-
-      // @include inputs;
     }
 
     .web {
       @include span-columns(3);
       @include omega();
-
-      // @include inputs;
     }
 
     input {

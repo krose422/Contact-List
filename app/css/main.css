@@ -30,18 +30,6 @@ input, button {
 .container {
   width: 100%; }
 
-/* MAIN CONTENT
----------------- */
-.main {
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .main::after {
-    clear: both;
-    content: "";
-    display: table; }
-
 /* HEADER
 ---------- */
 header {
@@ -72,6 +60,18 @@ header {
       font-family: "Stint Ultra Expanded", cursive;
       font-size: 2em;
       color: #736766; }
+
+/* MAIN CONTENT
+---------------- */
+.main {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .main::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 /* NAME LIST LEFT SIDEBAR
 --------------------------- */
@@ -240,3 +240,36 @@ header {
   border: 1px solid #D9D7C5;
   border-radius: .3em;
   clear: both; }
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  /* Contact Info Form
+--------------------- */
+  .form {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 31.22104%; }
+    .form:last-child {
+      margin-right: 0; }
+    .form form h4 {
+      font-size: 2em;
+      width: 100%; }
+    .form form .name {
+      width: 100%; }
+    .form form .mobile {
+      width: 100%; }
+    .form form .address {
+      width: 100%; }
+    .form form .web {
+      width: 100%; }
+  /* SELECTED CONTACT
+-------------------- */
+  .selectedContact {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 65.61052%;
+    clear: none;
+    margin-top: 4em; }
+    .selectedContact:last-child {
+      margin-right: 0; } }
