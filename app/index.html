@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project Name</title>
+  <title>Rolo - personal contacts</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <<<<<<<<<< FONTS >>>>>>>>>> -->
+  <link href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded|Pontano+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
+
+  <!-- <<<<<<<<<< STYLESHEETS >>>>>>>>>> -->
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+
 </head>
+
+
 <body>
 
   <div class="container">
 
-  </div>
+    <header>
+      <div class="innerHead">
+        <div class="logo">
+          <h2><i class="fa fa-th-list"></i>rolo</h2>
+        </div>
 
+        <div class="headtext">
+          <h3>your personal contact list</h3>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+
+    <section class="nameList">
+
+    </section>
+
+    <section class="form">
+      <form id="contactInput">
+      <h4>New contact information</h4>
+        <div class="name">
+          <input type="text" placeholder="first name" id="firstName"/>
+          <input type="text" placeholder="last name" id="lastName"/>
+        </div>
+        <div class="mobile">
+          <input type="text" placeholder="email address" id="emailAdd"/>
+          <input type="text" placeholder="phone number" id="phoneNum"/>
+        </div>
+        <div class="address">
+          <input type="text" placeholder="address line 1" id="addOne"/>
+          <input type="text" placeholder="address line 2" id="addTwo"/>
+        </div>
+        <div class="web">
+          <input type="text" placeholder="website" id="website"/>
+          <input type="text" placeholder="additional notes" id="notes"/>
+        </div>
+          <button>ADD</button>
+      </form>
+    </section>
+
+
+
+    </div> <!-- end main div -->
+
+  </div> <!-- end container div -->
+
+
+  <!-- <<<<<<<<<< SCRIPTS >>>>>>>>>> -->
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/underscore.js"></script>

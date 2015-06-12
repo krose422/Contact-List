@@ -18,9 +18,109 @@ html {
 body {
   font-size: 62.5%;
   min-width: 310px;
-  max-width: 100%; }
+  max-width: 100%;
+  font-family: "Pontano Sans", sans-serif;
+  color: #47403F; }
 
 input, button {
   border: none; }
   input:focus, button:focus {
     outline: none; }
+
+.container {
+  width: 100%; }
+
+/* MAIN CONTENT
+---------------- */
+.main {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .main::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* HEADER
+---------- */
+header {
+  width: 100%;
+  border-bottom: 2px solid #F2F2E9;
+  box-shadow: 0px 0.3px 6px 0px #D9D7C5;
+  overflow: hidden;
+  padding: 15px; }
+  header .innerHead {
+    width: 80%;
+    margin: auto; }
+  header .logo {
+    display: inline-block;
+    float: left;
+    width: 40%; }
+    header .logo h2 {
+      font-family: "Stint Ultra Expanded", cursive;
+      margin: 0;
+      font-size: 6em;
+      color: #844862; }
+      header .logo h2 i {
+        font-size: .5em;
+        padding-right: 15px; }
+  header .headtext {
+    display: inline-block;
+    float: right; }
+    header .headtext h3 {
+      font-family: "Stint Ultra Expanded", cursive;
+      font-size: 2em;
+      color: #736766; }
+
+/* NAME LIST LEFT SIDEBAR
+--------------------------- */
+.nameList {
+  height: 100vh;
+  background-color: #736766;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .nameList:last-child {
+    margin-right: 0; }
+
+/* Contact Info Form
+--------------------- */
+.form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding-top: 50px; }
+  .form:last-child {
+    margin-right: 0; }
+  .form form {
+    margin: auto; }
+    .form form h4 {
+      font-size: 2em; }
+    .form form .name {
+      display: inline-block;
+      float: left;
+      margin-right: 15px; }
+    .form form .mobile {
+      display: inline-block;
+      float: left;
+      margin-right: 15px; }
+    .form form .address {
+      display: inline-block;
+      float: left;
+      margin-right: 15px; }
+    .form form input {
+      display: block;
+      border: 1px solid #D9D7C5;
+      border-radius: 4px;
+      padding: 5px;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      width: 15em; }
+    .form form button {
+      background-color: #F2F2E9;
+      border: none;
+      display: block;
+      clear: both; }

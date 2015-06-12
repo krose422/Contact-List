@@ -4,11 +4,29 @@
 /* DECLARATIONS
 ---------------- */
 
+$stintfont: 'Stint Ultra Expanded', cursive;
+$pontanofont: 'Pontano Sans', sans-serif;
 
+$purple: #844862;
+$offwhite: #F2F2E9;
+$grey: #D9D7C5;
+$beige: #A69580;
+$darkgrey: #736766;
+$darkergrey: #47403F;
 
 /* MIXINS
 ---------- */
 
+@mixin border ($color) {
+  border: 1px solid $color;
+  border-radius: 4px;
+}
+
+@mixin inputs () {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+}
 
 
 /* GLOBAL STYLES
@@ -22,6 +40,8 @@ body {
   font-size: 62.5%;
   min-width: 310px;
   max-width: 100%;
+  font-family: $pontanofont;
+  color: $darkergrey;
 }
 
 input, button {
@@ -32,6 +52,120 @@ input, button {
   }
 
 }
+
+.container {
+  width: 100%;
+}
+
+/* MAIN CONTENT
+---------------- */
+
+.main {
+  width: 100%;
+  @include outer-container(100%);
+}
+
+/* HEADER
+---------- */
+
+
+header {
+  width: 100%;
+  border-bottom: 2px solid $offwhite;
+  box-shadow: 0px .3px 6px 0px $grey;
+  overflow: hidden;
+  padding: 15px;
+
+  .innerHead {
+    width: 80%;
+    margin: auto;
+  }
+  .logo {
+    display: inline-block;
+    float: left;
+    width: 40%;
+
+    h2 {
+      font-family: $stintfont;
+      margin: 0;
+      font-size: 6em;
+      color: $purple;
+
+      i {
+        font-size: .5em;
+        padding-right: 15px;
+      }
+    }
+
+
+  }
+  .headtext {
+    display: inline-block;
+    float: right;
+
+    h3 {
+      font-family: $stintfont;
+      font-size: 2em;
+      color: $darkgrey;
+    }
+  }
+}
+
+/* NAME LIST LEFT SIDEBAR
+--------------------------- */
+
+.nameList {
+  height: 100vh;
+  background-color: $darkgrey;
+  @include span-columns(3);
+}
+
+
+/* Contact Info Form
+--------------------- */
+
+.form {
+  @include span-columns(8);
+  padding-top: 50px;
+
+  form {
+    // width: 60%;
+    margin: auto;
+
+    h4 {
+      font-size: 2em;
+    }
+
+    .name {
+      @include inputs;
+    }
+
+    .mobile {
+      @include inputs;
+    }
+
+    .address {
+      @include inputs;
+    }
+
+    input {
+      display: block;
+      @include border($grey);
+      padding: 5px;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      width: 15em;
+    }
+    button {
+      background-color: $offwhite;
+      border: none;
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+
 
 
 @import "_small";
