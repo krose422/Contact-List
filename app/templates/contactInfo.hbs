@@ -1,51 +1,47 @@
         <div class="sc" id="{{ _id }}">
-          <div class="sc-fullname" id="sc-fullname">
-            <p>{{firstName}} {{lastName}}</p>
-          </div>
 
-          <div class="sc-top">
+          <div class="sc-left">
+            <div class="sc-fullname" id="sc-fullname">
+              <p>{{firstName}} {{lastName}}</p>
+            </div>
 
             <div class="sc-avatar" id="sc-avatar">
               <img src="images/User.png">
             </div>
+          </div> <!-- end sc-left -->
 
-            <div class="sc-topright">
-              <div class="phone" id="sc-phone">
-                <p><strong>Phone Number: </strong>{{phone}}</p>
-              </div>
+          <div class="sc-middle">
 
-              <div class="email" id="sc-email">
-                <p><strong>Email address: </strong><a href="mailto:{{email}}">{{email}}</a></p>
-              </div>
+            <div class="phone" id="sc-phone">
+              <p><strong>Phone Number: </strong>{{phone}}</p>
+            </div>
 
-              <div class="sc-website">
-                <p><strong>Website: </strong><a href="http://{{website}}" target="_blank">{{website}}</a></p>
-              </div>
-            </div> <!-- end div topright -->
+            <div class="email" id="sc-email">
+              <p><strong>Email address: </strong><a href="mailto:{{email}}">{{email}}</a></p>
+            </div>
 
-          </div> <!-- end div sc-top -->
+            <div class="sc-website">
+              <p><strong>Website: </strong><a href="http://{{website}}" target="_blank">{{website}}</a></p>
+            </div>
 
-          <div class="sc-bottom">
+            <div class="sc-address" id="sc-address">
+              <p>Address: {{addressOne}}</p>
+              <p>{{addressTwo}}</p>
+            </div>
 
-            <div class="sc-bottomleft">
-              <div class="sc-address" id="sc-address">
-                <p>Address: {{addressOne}}</p>
-                <p>{{addressTwo}}</p>
-              </div>
+            <div class="sc-notes" id="sc-notes">
+              <p>Additional notes: {{notes}}</p>
+            </div>
 
-              <div class="sc-notes" id="sc-notes">
-                <p>Additional notes: {{notes}}</p>
-              </div>
+          </div> <!-- end sc-middle div -->
 
-            </div> <!-- end sc-bottomleft div -->
-
+          <div class="sc-right">
             <div class="googlemap">
 
             </div>
-
-          </div> <!-- end sc-bottom div -->
+          </div>
 
           <div id="delete" class="delete">
-            <span>Delete Contact</span>
+            <p>Delete Contact</p>
           </div>
         </div>

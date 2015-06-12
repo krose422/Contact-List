@@ -235,66 +235,57 @@ header {
 -------------------- */
 .selectedContact {
   width: 90%;
-  height: 40em;
   margin: auto;
   clear: both;
   overflow: hidden;
   border: 1px solid #D9D7C5;
   border-radius: .3em;
-  box-shadow: 0px 0.3px 6px 0px #D9D7C5; }
-  .selectedContact .sc-fullname {
-    font-size: 4em;
-    text-align: center; }
-    .selectedContact .sc-fullname p {
-      margin-top: .5em; }
-  .selectedContact .sc-top {
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    margin-bottom: 2em;
-    overflow: hidden;
-    font-size: 2em; }
-    .selectedContact .sc-top::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .selectedContact .sc-top .sc-avatar {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 40.29137%;
-      display: inline-block;
-      float: left; }
-      .selectedContact .sc-top .sc-avatar:last-child {
-        margin-right: 0; }
-    .selectedContact .sc-top .sc-topright {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 57.35098%;
-      padding: 0; }
-      .selectedContact .sc-top .sc-topright:last-child {
-        margin-right: 0; }
-      .selectedContact .sc-top .sc-topright p {
-        margin-top: 0; }
-  .selectedContact .sc-bottom {
+  box-shadow: 0px 0.3px 6px 0px #D9D7C5;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em; }
+  .selectedContact::after {
     clear: both;
-    width: 70%;
-    margin: auto;
+    content: "";
+    display: table; }
+  .selectedContact .sc-left {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    overflow: hidden; }
+    .selectedContact .sc-left:last-child {
+      margin-right: 0; }
+    .selectedContact .sc-left .sc-fullname {
+      font-size: 3em; }
+      .selectedContact .sc-left .sc-fullname p {
+        margin-bottom: 2em; }
+  .selectedContact .sc-middle {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
     overflow: hidden;
-    font-size: 2em; }
-    .selectedContact .sc-bottom .sc-bottomleft {
-      display: inline-block;
-      float: left; }
-    .selectedContact .sc-bottom .googlemap {
-      display: inline-block;
-      float: right;
-      width: 100px;
-      height: 100px;
-      border: 1px solid #D9D7C5;
-      border-radius: .3em; }
+    margin-top: 25px;
+    font-size: 1.4em; }
+    .selectedContact .sc-middle:last-child {
+      margin-right: 0; }
+  .selectedContact .sc-right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0;
+    overflow: hidden; }
+    .selectedContact .sc-right:last-child {
+      margin-right: 0; }
+    .selectedContact .sc-right .googlemap {
+      height: 15em;
+      width: 100%;
+      background-color: #D9D7C5; }
   .selectedContact .delete {
+    clear: both;
     background-color: #736766;
     width: 18em;
     height: 6em;
@@ -305,11 +296,12 @@ header {
     cursor: pointer; }
     .selectedContact .delete:hover {
       background-color: #B63144; }
-    .selectedContact .delete span {
-      font-size: 3em;
+    .selectedContact .delete p {
+      font-size: 2em;
       text-align: center;
       color: #F2F2E9;
-      padding: 10px; }
+      padding: 16px;
+      margin: 0; }
   .selectedContact .deletedResponse {
     margin-top: 2em;
     width: 50%;
