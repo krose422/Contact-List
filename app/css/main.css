@@ -84,6 +84,67 @@ header {
   width: 23.23176%; }
   .nameList:last-child {
     margin-right: 0; }
+  .nameList h4 {
+    color: #F2F2E9;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "Stint Ultra Expanded", cursive; }
+  .nameList .sort {
+    padding-left: 1em;
+    width: 100%;
+    overflow: hidden;
+    margin: 2em 1em; }
+  .nameList .circle {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: #F2F2E9;
+    display: inline-block;
+    clear: both;
+    float: left;
+    position: relative;
+    transition: .15s all ease; }
+    .nameList .circle:hover {
+      background-color: #D9D7C5; }
+  .nameList p {
+    color: #F2F2E9;
+    font-size: 1.5em;
+    display: inline-block;
+    float: left;
+    margin: 0.2em 0 0 1em; }
+  .nameList ul {
+    list-style: none;
+    color: #F2F2E9;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    clear: both; }
+    .nameList ul li {
+      margin: 0;
+      padding: 10px;
+      cursor: pointer;
+      transition: .15s all ease; }
+      .nameList ul li:hover {
+        background-color: #F2F2E9;
+        opacity: .7;
+        color: #47403F; }
+    .nameList ul li:nth-child(odd) {
+      background-color: #47403F; }
+      .nameList ul li:nth-child(odd):hover {
+        background-color: #F2F2E9;
+        color: #47403F; }
+
+/* SORT STYLE (sorted class added on click in JS)
+-------------- */
+.sorted .circle:before {
+  position: absolute;
+  font-family: FontAwesome;
+  content: "\f13a";
+  font-size: 2em;
+  bottom: 2px;
+  left: 4px;
+  height: 80%;
+  color: #844862; }
 
 /* Contact Info Form
 --------------------- */
@@ -92,7 +153,7 @@ header {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
-  padding-top: 50px; }
+  padding-top: 10px; }
   .form:last-child {
     margin-right: 0; }
   .form form {
@@ -120,7 +181,20 @@ header {
       margin-bottom: 15px;
       width: 15em; }
     .form form button {
-      background-color: #F2F2E9;
+      margin: auto;
+      border-radius: 4px;
+      background-color: #844862;
+      color: white;
+      opacity: .9;
       border: none;
       display: block;
-      clear: both; }
+      clear: both;
+      padding: .6em;
+      width: 10em;
+      font-size: 1.8em;
+      transition: .15s all ease; }
+      .form form button:hover {
+        opacity: 1;
+        color: white;
+        padding: .8em;
+        width: 11em; }

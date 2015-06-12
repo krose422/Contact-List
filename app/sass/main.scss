@@ -28,6 +28,10 @@ $darkergrey: #47403F;
   margin-right: 15px;
 }
 
+@mixin transition () {
+  transition: .15s all ease;
+}
+
 
 /* GLOBAL STYLES
 ---------------- */
@@ -118,6 +122,94 @@ header {
   height: 100vh;
   background-color: $darkgrey;
   @include span-columns(3);
+
+  h4 {
+    color: $offwhite;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: $stintfont;
+  }
+
+  .sort {
+    padding-left: 1em;
+    width: 100%;
+    overflow: hidden;
+    margin: 2em 1em;
+  }
+
+  .circle {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: $offwhite;
+    display: inline-block;
+    clear: both;
+    float: left;
+    position: relative;
+    @include transition;
+
+    &:hover {
+      background-color: $grey;
+    }
+  }
+
+
+
+  p {
+    color: $offwhite;
+    font-size: 1.5em;
+    display: inline-block;
+    float: left;
+    margin: .2em 0 0 1em;
+
+  }
+
+  ul {
+    list-style: none;
+    color: $offwhite;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    clear: both;
+
+    li {
+      margin: 0;
+      padding: 10px;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        background-color: $offwhite;
+        opacity: .7;
+        color: $darkergrey;
+      }
+    }
+
+    li:nth-child(odd) {
+      background-color: $darkergrey;
+
+      &:hover {
+        background-color: $offwhite;
+        color: $darkergrey;
+      }
+    }
+  }
+}
+
+/* SORT STYLE (sorted class added on click in JS)
+-------------- */
+
+.sorted {
+  .circle:before {
+    position: absolute;
+    font-family: FontAwesome;
+    content: "\f13a";
+    font-size: 2em;
+    bottom: 2px;
+    left: 4px;
+    height: 80%;
+    color: $purple;
+  }
 }
 
 
@@ -126,7 +218,7 @@ header {
 
 .form {
   @include span-columns(8);
-  padding-top: 50px;
+  padding-top: 10px;
 
   form {
     // width: 60%;
@@ -157,10 +249,25 @@ header {
       width: 15em;
     }
     button {
-      background-color: $offwhite;
+      margin: auto;
+      border-radius: 4px;
+      background-color: $purple;
+      color: white;
+      opacity: .9;
       border: none;
       display: block;
       clear: both;
+      padding: .6em;
+      width: 10em;
+      font-size: 1.8em;
+      @include transition;
+
+      &:hover {
+        opacity: 1;
+        color: white;
+        padding: .8em;
+        width: 11em;
+      }
     }
   }
 }
