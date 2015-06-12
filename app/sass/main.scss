@@ -14,6 +14,7 @@ $offwhite: #F2F2E9;
 $grey: #D9D7C5;
 $darkgrey: #736766;
 $darkergrey: #5C5251;
+$red: #B63144;
 
 /* MIXINS
 ---------- */
@@ -232,7 +233,6 @@ header {
   // border-bottom: 1px solid $grey;
 
 
-
   form {
     width: 100%;
     margin: auto;
@@ -314,20 +314,23 @@ header {
   }
 
   .sc-top {
-    width: 70%;
+    @include outer-container(70%);
+    // width: 70%;
     margin: auto;
     margin-bottom: 2em;
     overflow: hidden;
     font-size: 2em;
 
     .sc-avatar {
+      @include span-columns(5);
       display: inline-block;
       float: left;
     }
 
     .sc-topright {
-      display: inline-block;
-      float: right;
+      @include span-columns(7);
+      // display: inline-block;
+      // float: right;
       padding: 0;
       p {
         margin-top: 0;
@@ -355,6 +358,42 @@ header {
       @include border($grey);
     }
   }
+
+  .delete {
+    background-color: $darkgrey;
+    width: 18em;
+    height: 6em;
+    border-radius: 4px;
+    text-align: center;
+    color: $offwhite;
+    margin: auto;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $red;
+    }
+
+    span {
+      font-size: 3em;
+      text-align: center;
+      color: $offwhite;
+      padding: 10px;
+    }
+  }
+
+  .deletedResponse {
+    margin-top: 2em;
+    width: 50%;
+    margin: auto;
+    font-size: 5em;
+    color: $purple;
+    text-align: center;
+
+    i {
+      font-size: 3em;
+    }
+  }
+
 }
 
 
