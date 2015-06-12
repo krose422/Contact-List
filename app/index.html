@@ -45,10 +45,7 @@
           <p>Sort by last name</p>
         </div>
         <ul id="leftList" class="leftList">
-          <li>Kelley Rose</li>
-          <li>Nick Medica</li>
-          <li>Evelyn Rose</li>
-          <li>Michael Rose</li>
+
         </ul>
       </section>
 
@@ -78,6 +75,49 @@
 
         <section id="selectedContact" class="selectedContact">
 
+          <div class="sc-fullname" id="sc-fullname">
+            <p>FULL NAME</p>
+          </div>
+
+          <div class="sc-top">
+
+            <div class="sc-avatar" id="sc-avatar">
+              <img src="images/User.png">
+            </div>
+
+            <div class="sc-topright">
+              <div class="phone" id="sc-phone">
+                <p><strong>Phone Number:</strong> 555-666-7777</p>
+              </div>
+
+              <div class="email" id="sc-email">
+                <p><strong>Email address: </strong><a href="#">email@email.com</a></p>
+              </div>
+
+              <div class="sc-website">
+                <p><strong>Website: </strong><a href="#">website@web.com</a></p>
+              </div>
+            </div> <!-- end div topright -->
+
+          </div> <!-- end div sc-top -->
+
+          <div class="sc-bottom">
+
+            <div class="sc-bottomleft">
+              <div class="sc-address" id="sc-address">
+                <p>1111 Address Rd.</p>
+                <p>City, ST 33333</p>
+              </div>
+
+
+            </div> <!-- end sc-bottomleft div -->
+
+            <div class="googlemap">
+
+            </div>
+
+          </div> <!-- end sc-bottom div -->
+
         </section>
 
       </div> <!-- end rightpage div -->
@@ -87,11 +127,15 @@
 
   </div> <!-- end container div -->
 
+  <!-- add to footer - credit:
+          <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
+
 
   <!-- <<<<<<<<<< SCRIPTS >>>>>>>>>> -->
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/underscore.js"></script>
+  <script src="js/vendor/backbone.js"></script>
   <script src="js/vendor/handlebars.js"></script>
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>

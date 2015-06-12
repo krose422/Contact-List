@@ -218,21 +218,25 @@ header {
 
 .rightpage {
   @include span-columns(9);
+  height: 100vh;
 }
 
 /* Contact Info Form
 --------------------- */
 
 .form {
-  padding-top: 1em;
+  // padding-top: 1em;
   margin-bottom: 2em;
   width: 100%;
   @include outer-container(90%);
+  // border-bottom: 1px solid $grey;
+
 
 
   form {
     width: 100%;
     margin: auto;
+    padding: 1.5em;
 
     h4 {
       font-size: 2em;
@@ -295,9 +299,64 @@ header {
   width: 90%;
   height: 40em;
   margin: auto;
-  @include border($grey);
   clear: both;
+  overflow: hidden;
+  @include border($grey);
+  box-shadow: 0px .3px 6px 0px $grey;
+
+
+  .sc-fullname {
+    font-size: 4em;
+    text-align: center;
+    p {
+      margin-top: .5em;
+    }
+  }
+
+  .sc-top {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2em;
+    overflow: hidden;
+    font-size: 2em;
+
+    .sc-avatar {
+      display: inline-block;
+      float: left;
+    }
+
+    .sc-topright {
+      display: inline-block;
+      float: right;
+      padding: 0;
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .sc-bottom {
+    clear: both;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    font-size: 2em;
+
+    .sc-bottomleft {
+      display: inline-block;
+      float: left;
+    }
+
+    .googlemap {
+      display: inline-block;
+      float: right;
+      width: 100px;
+      height: 100px;
+      @include border($grey);
+    }
+  }
 }
+
 
 
 
