@@ -20,7 +20,7 @@ body {
   min-width: 310px;
   max-width: 100%;
   font-family: "Pontano Sans", sans-serif;
-  color: #47403F; }
+  color: #5C5251; }
 
 input, button {
   border: none; }
@@ -127,12 +127,12 @@ header {
       .nameList ul li:hover {
         background-color: #F2F2E9;
         opacity: .7;
-        color: #47403F; }
+        color: #5C5251; }
     .nameList ul li:nth-child(odd) {
-      background-color: #47403F; }
+      background-color: #5C5251; }
       .nameList ul li:nth-child(odd):hover {
         background-color: #F2F2E9;
-        color: #47403F; }
+        color: #5C5251; }
 
 /* SORT STYLE (sorted class added on click in JS)
 -------------- */
@@ -216,8 +216,8 @@ header {
       margin: auto;
       border-radius: 4px;
       background-color: #844862;
-      color: white;
-      opacity: .9;
+      color: #F2F2E9;
+      opacity: 1;
       border: none;
       display: block;
       clear: both;
@@ -226,8 +226,7 @@ header {
       font-size: 1.8em;
       transition: .15s all ease; }
       .form form button:hover {
-        opacity: 1;
-        color: white;
+        background-color: #995372;
         padding: .8em;
         width: 11em; }
 
