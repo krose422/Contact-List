@@ -34,6 +34,12 @@ $red: #B63144;
   transition: .15s all ease;
 }
 
+@mixin boxshadow () {
+  -webkit-box-shadow: 0px .3px 6px 0px $grey;
+  -moz-box-shadow: 0px .3px 6px 0px $grey;
+  box-shadow: 0px .3px 6px 0px $grey;
+}
+
 
 /* GLOBAL STYLES
 ---------------- */
@@ -72,9 +78,9 @@ input, button {
 header {
   width: 100%;
   border-bottom: 2px solid $offwhite;
-  box-shadow: 0px .3px 6px 0px $grey;
+  @include boxshadow;
   overflow: hidden;
-  padding: 15px;
+  padding: 10px;
 
   .innerHead {
     width: 80%;
@@ -151,6 +157,7 @@ header {
     float: left;
     position: relative;
     @include transition;
+    margin-bottom: 1em;
 
     &:hover {
       background-color: $grey;
@@ -198,11 +205,11 @@ header {
   }
 }
 
-/* SORT STYLE (sorted class added on click in JS)
+/* SORT STYLE
 -------------- */
 
 .sorted {
-  .circle:before {
+  &:before {
     position: absolute;
     font-family: FontAwesome;
     content: "\f13a";
@@ -230,7 +237,7 @@ header {
   margin-bottom: 2em;
   width: 100%;
   @include outer-container(90%);
-  // border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $grey;
 
 
   form {
@@ -301,7 +308,7 @@ header {
   clear: both;
   overflow: hidden;
   @include border($grey);
-  box-shadow: 0px .3px 6px 0px $grey;
+  @include boxshadow;
   @include outer-container(80%);
   padding: 3em;
 

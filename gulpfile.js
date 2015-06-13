@@ -10,6 +10,7 @@ var plumber     = require('gulp-plumber');
 var jshint      = require('gulp-jshint');
 var htmlhint    = require('gulp-htmlhint');
 var server      = require('gulp-server-livereload');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 var notifyError = function() {
@@ -126,4 +127,17 @@ gulp.task('bower:fonts', function(){
   return gulp.src(bower({filter: /\.(eot|svg|ttf|woff|woff2|otf)$/g}))
     .pipe(notifyError())
     .pipe(gulp.dest('app/css/fonts/'));
+});
+
+//================================================
+//  AUTO PREFIXER
+//================================================
+
+gulp.task('prefixer', function () {
+    return gulp.src('src/app.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist'));
 });

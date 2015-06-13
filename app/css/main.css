@@ -35,9 +35,11 @@ input, button {
 header {
   width: 100%;
   border-bottom: 2px solid #F2F2E9;
+  -webkit-box-shadow: 0px 0.3px 6px 0px #D9D7C5;
+  -moz-box-shadow: 0px 0.3px 6px 0px #D9D7C5;
   box-shadow: 0px 0.3px 6px 0px #D9D7C5;
   overflow: hidden;
-  padding: 15px; }
+  padding: 10px; }
   header .innerHead {
     width: 80%;
     margin: auto; }
@@ -103,7 +105,8 @@ header {
     clear: both;
     float: left;
     position: relative;
-    transition: .15s all ease; }
+    transition: .15s all ease;
+    margin-bottom: 1em; }
     .nameList .circle:hover {
       background-color: #D9D7C5; }
   .nameList p {
@@ -134,9 +137,9 @@ header {
         background-color: #F2F2E9;
         color: #5C5251; }
 
-/* SORT STYLE (sorted class added on click in JS)
+/* SORT STYLE
 -------------- */
-.sorted .circle:before {
+.sorted:before {
   position: absolute;
   font-family: FontAwesome;
   content: "\f13a";
@@ -164,7 +167,8 @@ header {
   width: 100%;
   max-width: 90%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  border-bottom: 1px solid #D9D7C5; }
   .form::after {
     clear: both;
     content: "";
@@ -240,6 +244,8 @@ header {
   overflow: hidden;
   border: 1px solid #D9D7C5;
   border-radius: .3em;
+  -webkit-box-shadow: 0px 0.3px 6px 0px #D9D7C5;
+  -moz-box-shadow: 0px 0.3px 6px 0px #D9D7C5;
   box-shadow: 0px 0.3px 6px 0px #D9D7C5;
   max-width: 80%;
   margin-left: auto;

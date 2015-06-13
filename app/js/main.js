@@ -11,6 +11,8 @@ var website = $('#website');
 var notes = $('#notes');
 var addressOne = $('#addOne');
 var addressTwo = $('#addTwo');
+var lat,
+    lng;
 
 // Add to collection
 var allContacts = new ContactCollection();
@@ -23,21 +25,37 @@ allContacts.fetch().done( function () {
   });
 });
 
-// Add instance function
 
+  var map = function () {
+    var latlngs = $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + addressOne.val() + ' ' + addressTwo.val()  + '&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos').done( function  (data) {
+        var location = data.results[0].geometry.location;
+        lat = location.lat.toFixed(4);
+        lng = location.lng.toFixed(4);
+        // contact.lat = lat;
+        // contact.lng = lng;
+    });
+  };
+
+// Add instance function
 var addContact = function (e) {
   e.preventDefault();
 
+  map();
+
   var contact = new Contact ({
-      firstName: firstName.val(),
-      lastName: lastName.val(),
-      email: email.val(),
-      phone: phone.val(),
-      website: website.val(),
-      notes: notes.val(),
-      addressOne: addressOne.val(),
-      addressTwo: addressTwo.val()
+    firstName: firstName.val(),
+    lastName: lastName.val(),
+    email: email.val(),
+    phone: phone.val(),
+    website: website.val(),
+    notes: notes.val(),
+    addressOne: addressOne.val(),
+    addressTwo: addressTwo.val(),
+    lat: lat,
+    lng: lng
   });
+  console.log(lat);
+  console.log(lng);
 
   allContacts.add(contact).save().success( function (data) {
     addContactToList(data);
@@ -84,6 +102,13 @@ var populateSC = function () {
   });
 };
 
+// Sort function
+
+var sortContacts = function () {
+  $(this).addClass('sorted');
+  $(this).siblings().removeClass('sorted');
+};
+
 // Form submit listener
 $('#contactInput').on('submit', addContact);
 
@@ -92,5 +117,23 @@ $('.main').on('click','#delete', deleteContact);
 
 // List item event listener
 $('ul').on('click', 'li', populateSC);
+
+// Sort button event listener
+$('.nameList').on('click', '.circle', sortContacts);
+
+
+
+
+// var mapall = function () {
+//   allContacts.each (function (contact) {
+//     var latlngs = $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + contact.attributes.addressOne + ' ' + contact.attributes.addressTwo  + '&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos').done( function  (data) {
+//         var location = data.results[0].geometry.location;
+//         lat = location.lat.toFixed(4);
+//         lng = location.lng.toFixed(4);
+//         contact.attributes.lat = lat;
+//         contact.attributes.lng = lng;
+//     });
+//   });
+// };
 
 // }());
