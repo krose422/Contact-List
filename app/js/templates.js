@@ -24,11 +24,11 @@ this["template"]["contactInfo"] = Handlebars.template({"compiler":[6,">= 2.0.0-b
     + alias3(((helper = (helper = helpers.addressTwo || (depth0 != null ? depth0.addressTwo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressTwo","hash":{},"data":data}) : helper)))
     + "</p>\n            </div>\n\n            <div class=\"sc-notes\" id=\"sc-notes\">\n              <p>Additional notes: "
     + alias3(((helper = (helper = helpers.notes || (depth0 != null ? depth0.notes : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"notes","hash":{},"data":data}) : helper)))
-    + "</p>\n            </div>\n\n          </div> <!-- end sc-middle div -->\n\n          <div class=\"sc-right\">\n            <div class=\"googlemap\" id=\"map-canvas\">\n              <iframe width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/view?zoom=16&center="
-    + alias3(((helper = (helper = helpers.lat || (depth0 != null ? depth0.lat : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lat","hash":{},"data":data}) : helper)))
-    + "%2C"
-    + alias3(((helper = (helper = helpers.lng || (depth0 != null ? depth0.lng : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lng","hash":{},"data":data}) : helper)))
-    + "&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos\"></iframe>\n            </div>\n          </div>\n\n          <div id=\"delete\" class=\"delete\">\n            <p>Delete Contact</p>\n          </div>\n        </div>\n";
+    + "</p>\n            </div>\n\n          </div> <!-- end sc-middle div -->\n\n          <div class=\"sc-right\">\n            <div class=\"googlemap\" id=\"map-canvas\">\n              <iframe width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src='https://www.google.com/maps/embed/v1/search?q="
+    + alias3(((helper = (helper = helpers.addressOne || (depth0 != null ? depth0.addressOne : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressOne","hash":{},"data":data}) : helper)))
+    + "%20"
+    + alias3(((helper = (helper = helpers.addressTwo || (depth0 != null ? depth0.addressTwo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressTwo","hash":{},"data":data}) : helper)))
+    + "%20&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos'></iframe>\n            </div>\n          </div>\n\n          <div id=\"delete\" class=\"delete\">\n            <p>Delete Contact</p>\n          </div>\n        </div>\n";
 },"useData":true});
 this["template"] = this["template"] || {};
 this["template"]["nameList"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

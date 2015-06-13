@@ -26,21 +26,10 @@ allContacts.fetch().done( function () {
 });
 
 
-  var map = function () {
-    var latlngs = $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + addressOne.val() + ' ' + addressTwo.val()  + '&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos').done( function  (data) {
-        var location = data.results[0].geometry.location;
-        lat = location.lat.toFixed(4);
-        lng = location.lng.toFixed(4);
-        // contact.lat = lat;
-        // contact.lng = lng;
-    });
-  };
-
 // Add instance function
 var addContact = function (e) {
   e.preventDefault();
 
-  map();
 
   var contact = new Contact ({
     firstName: firstName.val(),
@@ -121,19 +110,5 @@ $('ul').on('click', 'li', populateSC);
 // Sort button event listener
 $('.nameList').on('click', '.circle', sortContacts);
 
-
-
-
-// var mapall = function () {
-//   allContacts.each (function (contact) {
-//     var latlngs = $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + contact.attributes.addressOne + ' ' + contact.attributes.addressTwo  + '&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos').done( function  (data) {
-//         var location = data.results[0].geometry.location;
-//         lat = location.lat.toFixed(4);
-//         lng = location.lng.toFixed(4);
-//         contact.attributes.lat = lat;
-//         contact.attributes.lng = lng;
-//     });
-//   });
-// };
 
 // }());
