@@ -2,7 +2,7 @@
 
           <div class="sc-left">
             <div class="sc-fullname" id="sc-fullname">
-              <p>{{firstName}} {{lastName}}</p>
+              <p><strong>{{firstName}} {{lastName}}</strong></p>
             </div>
 
             <div class="sc-avatar" id="sc-avatar">
@@ -13,24 +13,24 @@
           <div class="sc-middle">
 
             <div class="phone" id="sc-phone">
-              <p><strong>Phone Number: </strong>{{phone}}</p>
+              <p><strong>Phone Number: </strong><em>{{phone}}</em></p>
             </div>
 
             <div class="email" id="sc-email">
-              <p><strong>Email address: </strong><a href="mailto:{{email}}">{{email}}</a></p>
+              <p><strong>Email address: </strong><a href="mailto:{{email}}"><em>{{email}}</em></a></p>
             </div>
 
             <div class="sc-website">
-              <p><strong>Website: </strong><a href="http://{{website}}" target="_blank">{{website}}</a></p>
+              <p><strong>Website: </strong><a href="http://{{website}}" target="_blank"><em>{{website}}</em></a></p>
             </div>
 
             <div class="sc-address" id="sc-address">
-              <p>Address: {{addressOne}}</p>
-              <p>{{addressTwo}}</p>
+              <p><strong>Address: </strong><em>{{addressOne}}</em></p>
+              <p><em>{{addressTwo}}</em></p>
             </div>
 
             <div class="sc-notes" id="sc-notes">
-              <p>Additional notes: {{notes}}</p>
+              <p><strong>Additional notes: </strong><em>{{notes}}</em></p>
             </div>
 
           </div> <!-- end sc-middle div -->

@@ -80,7 +80,7 @@ header {
   border-bottom: 2px solid $offwhite;
   @include boxshadow;
   overflow: hidden;
-  padding: 10px;
+  padding: 0;
 
   .innerHead {
     width: 80%;
@@ -248,6 +248,8 @@ header {
     h4 {
       font-size: 2em;
       @include fill-parent();
+      margin-top: 0;
+      margin-bottom: .8em;
     }
 
     .name {
@@ -285,15 +287,15 @@ header {
       border: none;
       display: block;
       clear: both;
-      padding: .6em;
-      width: 10em;
+      padding: .3em;
+      width: 7em;
       font-size: 1.8em;
       @include transition;
 
       &:hover {
         background-color: $lightpurple;
-        padding: .8em;
-        width: 11em;
+        padding: .5em;
+        width: 8em;
       }
     }
   }
@@ -309,36 +311,41 @@ header {
   overflow: hidden;
   @include border($grey);
   @include boxshadow;
-  @include outer-container(80%);
+  @include outer-container(100%);
   padding: 3em;
 
   .sc-left {
-    @include span-columns(4);
+    @include span-columns(3);
     overflow: hidden;
 
     .sc-fullname {
       font-size: 3em;
 
       p {
-        margin-bottom: 2em;
+        margin-top: 0;
+        margin-bottom: 1em;
       }
+    }
+
+    .sc-avatar {
+      padding-top: 2em;
     }
   }
 
   .sc-middle {
-    @include span-columns(4);
+    @include span-columns(3);
     overflow: hidden;
     margin-top: 25px;
     font-size: 1.4em;
   }
 
   .sc-right {
-    @include span-columns(4);
+    @include span-columns(6);
     @include omega();
     overflow: hidden;
 
     .googlemap {
-      height: 15em;
+      height: 25em;
       width: 100%;
       background-color: $grey;
     }
@@ -348,23 +355,24 @@ header {
   .delete {
     clear: both;
     background-color: $darkgrey;
-    width: 18em;
-    height: 6em;
+    width: 16em;
+    height: 4em;
     border-radius: 4px;
     text-align: center;
     color: $offwhite;
     margin: auto;
     cursor: pointer;
+    margin-left: 0;
 
     &:hover {
       background-color: $red;
     }
 
     p {
-      font-size: 2em;
+      font-size: 1.7em;
       text-align: center;
       color: $offwhite;
-      padding: 16px;
+      padding: 9px;
       margin: 0;
     }
   }
