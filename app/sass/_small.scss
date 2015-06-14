@@ -38,6 +38,7 @@ header {
     font-size: 1.5em;
   }
 
+
   .sort {
     padding-left: .5em;
     margin-left: .3em;
@@ -164,6 +165,19 @@ header {
         font-size: 1em;
         padding: .3em;
       }
+    }
+  }
+
+  .deletedResponse {
+    margin-top: 2em;
+    width: 50%;
+    margin: auto;
+    font-size: 3em;
+    color: $purple;
+    text-align: center;
+
+    i {
+      font-size: 2em;
     }
   }
 

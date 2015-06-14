@@ -112,7 +112,6 @@ header {
     clear: both;
     float: left;
     position: relative;
-    transition: .15s all ease;
     margin-bottom: 1em; }
     .nameList .circle:hover {
       background-color: #D9D7C5; }
@@ -160,7 +159,7 @@ header {
     padding: .3em; }
 
 .noFoot {
-  height: calc(100vh - 143px); }
+  height: calc(100vh - 140px); }
 
 /* SORT STYLE
 -------------- */
@@ -360,8 +359,7 @@ header {
       margin-right: 0; }
     .selectedContact .sc-right .googlemap {
       height: 25em;
-      width: 100%;
-      background-color: #D9D7C5; }
+      width: 100%; }
   .selectedContact .delete {
     clear: both;
     background-color: #736766;
@@ -497,6 +495,15 @@ header {
         .selectedContact .sc-left .delete p {
           font-size: 1em;
           padding: .3em; }
+    .selectedContact .deletedResponse {
+      margin-top: 2em;
+      width: 50%;
+      margin: auto;
+      font-size: 3em;
+      color: #844862;
+      text-align: center; }
+      .selectedContact .deletedResponse i {
+        font-size: 2em; }
     .selectedContact .sc-middle {
       width: 100%;
       margin-top: .5em;

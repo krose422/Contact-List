@@ -164,7 +164,6 @@ header {
     clear: both;
     float: left;
     position: relative;
-    @include transition;
     margin-bottom: 1em;
 
     &:hover {
@@ -232,7 +231,7 @@ header {
 }
 
 .noFoot {
-  height: calc(100vh - 143px);
+  height: calc(100vh - 140px);
 }
 
 /* SORT STYLE
@@ -431,7 +430,7 @@ header {
     .googlemap {
       height: 25em;
       width: 100%;
-      background-color: $grey;
+      // background-color: $grey;
     }
 
   }
@@ -475,10 +474,8 @@ header {
     }
   }
 
+
 }
-
-
-
 
 @import "_small";
 @import "_medium";

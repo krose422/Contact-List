@@ -1,6 +1,6 @@
-// ; (function () {
+; (function () {
 
-//   'use strict';
+  'use strict';
 
 // Define inputmask for phone number input
 $(document).ready(function () {
@@ -27,7 +27,6 @@ var allContacts = new ContactCollection();
 allContacts.fetch().done( function () {
   allContacts.each( function (model) {
     addContactToList(model.attributes);
-    addContactToSC(model.attributes);
   });
 });
 
@@ -51,7 +50,6 @@ var addContact = function (e) {
 
     allContacts.add(contact).save().success( function (data) {
       addContactToList(data);
-      addContactToSC(data);
       highlightName();
     });
 
@@ -63,14 +61,10 @@ var addContact = function (e) {
   }
 };
 
-// Add contact function
+// Add contact function - adds name to left list and info to sel contact section
 var addContactToList = function (d) {
   var nameListTemplate = template.nameList(d);
   $('#leftList').prepend(nameListTemplate);
-};
-
-// Add contact to 'selected contact' section of page
-var addContactToSC = function (d) {
   var selectedContactTemplate = template.contactInfo(d);
   $('#selectedContact').html(selectedContactTemplate);
 };
@@ -167,17 +161,6 @@ $('#lastNameSort').on('click', lastNameSort);
 // Enter http:// on focus of website input field
 $('#website').on('focus', function () {
   $(this).val('http://');
-  // websiteEntry();
 });
 
-// var websiteEntry = function () {
-//   var el = $(this).get(0);
-//   var elemLength = el.value.length;
-
-//   el.selectionStart = elemLength;
-//   el.selectionEnd = elemLength;
-//   el.focus();
-// };
-
-
-// }());
+}());
