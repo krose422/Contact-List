@@ -32,9 +32,10 @@ input, button {
 
 a {
   text-decoration: none;
-  color: #E37CA8; }
+  color: #B2DBC4; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #738F7F; }
 
 /* HEADER
 ---------- */
@@ -57,7 +58,7 @@ header {
       font-family: "Stint Ultra Expanded", cursive;
       margin: 0;
       font-size: 6em;
-      color: #844862; }
+      color: #738F7F; }
       header .logo h2 i {
         font-size: .5em;
         padding-right: .5em; }
@@ -150,7 +151,7 @@ header {
         position: absolute;
         left: 16px;
         top: 13px;
-        color: #844862; }
+        color: #738F7F; }
   .nameList footer {
     overflow: hidden;
     background-color: #5C5251;
@@ -171,7 +172,7 @@ header {
   bottom: 2px;
   left: 4px;
   height: 80%;
-  color: #844862; }
+  color: #738F7F; }
 
 /* RIGHT PAGE
 -------------- */
@@ -255,11 +256,11 @@ header {
       font-size: 1.5em;
       margin-bottom: 1em;
       width: 100%;
-      color: #844862; }
+      color: #738F7F; }
     .form form button {
       margin: auto;
       border-radius: 4px;
-      background-color: #844862;
+      background-color: #738F7F;
       color: #F2F2E9;
       opacity: 1;
       border: none;
@@ -270,7 +271,7 @@ header {
       font-size: 1.8em;
       transition: .15s all ease; }
       .form form button:hover {
-        background-color: #E37CA8;
+        background-color: #B2DBC4;
         padding: .5em;
         width: 8em; }
 
@@ -385,7 +386,7 @@ header {
     width: 50%;
     margin: auto;
     font-size: 5em;
-    color: #844862;
+    color: #738F7F;
     text-align: center; }
     .selectedContact .deletedResponse i {
       font-size: 3em; }
