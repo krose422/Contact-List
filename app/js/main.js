@@ -1,6 +1,6 @@
 // ; (function () {
 
-  // 'use strict';
+//   'use strict';
 
 // Define inputmask for phone number input
 $(document).ready(function () {
@@ -23,11 +23,6 @@ var sortedContacts;
 // Add to collection
 var allContacts = new ContactCollection();
 
-// allContacts.comparator = function(item) {
-//     return item.get('firstName').toLowerCase();
-//   };
-
-
 // Get existing contacts from database, upload to DOM
 allContacts.fetch().done( function () {
   allContacts.each( function (model) {
@@ -35,7 +30,6 @@ allContacts.fetch().done( function () {
     addContactToSC(model.attributes);
   });
 });
-
 
 // Add instance function
 var addContact = function (e) {
@@ -55,7 +49,6 @@ var addContact = function (e) {
       addressTwo: addressTwo.val()
     });
 
-
     allContacts.add(contact).save().success( function (data) {
       addContactToList(data);
       addContactToSC(data);
@@ -67,7 +60,6 @@ var addContact = function (e) {
   if (firstN === '') {
     $('.alert').addClass('show');
   }
-
 };
 
 // Add contact function
@@ -76,6 +68,7 @@ var addContactToList = function (d) {
   $('#leftList').prepend(nameListTemplate);
 };
 
+// Add contact to 'selected contact' section of page
 var addContactToSC = function (d) {
   var selectedContactTemplate = template.contactInfo(d);
   $('#selectedContact').html(selectedContactTemplate);
@@ -86,7 +79,6 @@ var deleteContact = function () {
   var contactToDelete = $(this).parent(),
       idToDelete = contactToDelete.attr('id'),
       contactToDeleteList = $('.leftList').find('[data-id=' + idToDelete + ']');
-
   allContacts.get(idToDelete).destroy().success( function (data) {
     contactToDelete.remove();
     contactToDeleteList.remove();
@@ -94,15 +86,23 @@ var deleteContact = function () {
   });
 };
 
+// Highlight name in left list shown in SC
+var highlightName = function () {
+  var idToHighlight = $('.sc').attr('id');
+  var listContactToHighlight = $('.leftList').find('[data-id=' + idToHighlight + ']');
+  listContactToHighlight.addClass('selected');
+  listContactToHighlight.siblings().removeClass('selected');
+};
+
 // Populate selected contact function
 var populateSC = function () {
   var idToPopulate = $(this).data('id');
-
   allContacts.each( function (contact) {
     if (idToPopulate === contact.id) {
       $('.selectedContact').html(template.contactInfo(contact.toJSON()));
     }
   });
+  highlightName();
 };
 
 // Toggle sorted class on click
@@ -111,6 +111,7 @@ var addSortClass = function () {
   $(this).siblings().removeClass('sorted');
 };
 
+// Append sorted list to name list on left side
 var appendSortedList = function () {
   $('#leftList').empty();
   sortedContacts.each( function (contact) {
@@ -119,6 +120,7 @@ var appendSortedList = function () {
   });
 };
 
+// Sort names in left list by last name
 var lastNameSort = function () {
   allContacts.fetch().done (function () {
     allContacts.comparator = function(item) {
@@ -126,9 +128,11 @@ var lastNameSort = function () {
     };
     sortedContacts = allContacts.sort();
     appendSortedList();
+    highlightName();
   });
 };
 
+// Sort names in left list by first name
 var firstNameSort = function () {
   allContacts.fetch().done( function () {
     allContacts.comparator = function(item) {
@@ -136,8 +140,10 @@ var firstNameSort = function () {
     };
     sortedContacts = allContacts.sort();
     appendSortedList();
+    highlightName();
   });
 };
+
 
 // Form submit listener
 $('#contactInput').on('submit', addContact);

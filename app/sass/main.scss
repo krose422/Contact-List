@@ -54,6 +54,7 @@ body {
   max-width: 100%;
   font-family: $pontanofont;
   color: $darkergrey;
+  // background-color: $offwhite;
 }
 
 input, button {
@@ -192,15 +193,13 @@ header {
         opacity: .7;
         color: $darkergrey;
       }
+
     }
 
-    li:nth-child(odd) {
-      background-color: $darkergrey;
-
-      &:hover {
-        background-color: $offwhite;
-        color: $darkergrey;
-      }
+    .selected {
+      background-color: $offwhite;
+      opacity: .7;
+      color: $darkergrey;
     }
   }
 }
@@ -231,8 +230,6 @@ header {
 
 /* Contact Info Form
 --------------------- */
-
-
 
 .form {
   margin-bottom: 2em;

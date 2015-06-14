@@ -131,11 +131,10 @@ header {
         background-color: #F2F2E9;
         opacity: .7;
         color: #5C5251; }
-    .nameList ul li:nth-child(odd) {
-      background-color: #5C5251; }
-      .nameList ul li:nth-child(odd):hover {
-        background-color: #F2F2E9;
-        color: #5C5251; }
+    .nameList ul .selected {
+      background-color: #F2F2E9;
+      opacity: .7;
+      color: #5C5251; }
 
 /* SORT STYLE
 -------------- */
