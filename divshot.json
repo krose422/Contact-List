@@ -1,0 +1,6 @@
+{
+  "name": "kelley-rose-contact-list",
+  "root": "app",
+  "clean_urls": true,
+  "error_page": "error.html"
+}

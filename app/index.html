@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="icon" type="image/ico" href="favicon.png" />
+  <meta charset="UTF-8">
+
   <title>dex contacts</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,11 +41,11 @@
       <section id="nameList" class="nameList">
         <h4>Contacts</h4>
         <div class="sort">
-          <div class="circle"></div>
+          <div class="circle" id="firstNameSort"></div>
           <p>Sort by first name</p>
         <!-- </div>
         <div class="sort"> -->
-          <div class="circle"></div>
+          <div class="circle" id="lastNameSort"></div>
           <p>Sort by last name</p>
         </div>
         <ul id="leftList" class="leftList">
@@ -51,15 +55,17 @@
 
       <div class="rightpage">
         <section class="form">
+        <h4>New contact information</h4>
+          <p class="alert"><i class="fa fa-frown-o"></i>Oops! First name required to add contact.</p>
           <form  class="contactInput" id="contactInput">
-          <h4>New contact information</h4>
+
             <div class="name">
               <input type="text" placeholder="first name" id="firstName"/>
               <input type="text" placeholder="last name" id="lastName"/>
             </div>
             <div class="mobile">
               <input type="text" placeholder="email address" id="emailAdd"/>
-              <input type="text" placeholder="phone number" id="phoneNum"/>
+              <input type="tel" placeholder="phone (555) 555-5555" id="phoneNum"/>
             </div>
             <div class="address">
               <input type="text" placeholder="address line 1" id="addOne"/>
@@ -69,7 +75,7 @@
               <input type="text" placeholder="website" id="website"/>
               <input type="text" placeholder="additional notes" id="notes"/>
             </div>
-              <button>ADD</button>
+            <button>ADD</button>
           </form>
         </section>
 
@@ -93,6 +99,8 @@
   <!-- <<<<<<<<<< SCRIPTS >>>>>>>>>> -->
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/jquery.inputmask.js" type="text/javascript"></script>
+  <script src="js/vendor/jquery.inputmask.js" type="text/javascript"></script>
   <script src="js/vendor/underscore.js"></script>
   <script src="js/vendor/backbone.js"></script>
   <script src="js/vendor/handlebars.js"></script>

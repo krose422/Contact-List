@@ -2,6 +2,13 @@
 
   // 'use strict';
 
+// Define inputmask for phone number input
+$(document).ready(function () {
+  $('#phoneNum').inputmask('999-999-9999', { showMaskOnFocus: false, showMaskOnHover: false });
+  firstNameSort();
+  $('#firstNameSort').addClass('sorted');
+});
+
 // DOM variables
 var firstName = $('#firstName');
 var lastName = $('#lastName');
@@ -11,11 +18,15 @@ var website = $('#website');
 var notes = $('#notes');
 var addressOne = $('#addOne');
 var addressTwo = $('#addTwo');
-var lat,
-    lng;
+var sortedContacts;
 
 // Add to collection
 var allContacts = new ContactCollection();
+
+// allContacts.comparator = function(item) {
+//     return item.get('firstName').toLowerCase();
+//   };
+
 
 // Get existing contacts from database, upload to DOM
 allContacts.fetch().done( function () {
@@ -30,29 +41,32 @@ allContacts.fetch().done( function () {
 var addContact = function (e) {
   e.preventDefault();
 
+  var firstN = firstName.val();
 
-  var contact = new Contact ({
-    firstName: firstName.val(),
-    lastName: lastName.val(),
-    email: email.val(),
-    phone: phone.val(),
-    website: website.val(),
-    notes: notes.val(),
-    addressOne: addressOne.val(),
-    addressTwo: addressTwo.val(),
-    lat: lat,
-    lng: lng
-  });
-  console.log(lat);
-  console.log(lng);
+  if (firstN !== '') {
+    var contact = new Contact ({
+      firstName: firstName.val(),
+      lastName: lastName.val(),
+      email: email.val(),
+      phone: phone.val(),
+      website: website.val(),
+      notes: notes.val(),
+      addressOne: addressOne.val(),
+      addressTwo: addressTwo.val()
+    });
 
-  allContacts.add(contact).save().success( function (data) {
-    addContactToList(data);
-    addContactToSC(data);
-  });
 
-  this.reset();
-  $('#firstName').focus();
+    allContacts.add(contact).save().success( function (data) {
+      addContactToList(data);
+      addContactToSC(data);
+    });
+
+    this.reset();
+    $('#firstName').focus();
+  }
+  if (firstN === '') {
+    $('.alert').addClass('show');
+  }
 
 };
 
@@ -91,11 +105,38 @@ var populateSC = function () {
   });
 };
 
-// Sort function
-
-var sortContacts = function () {
+// Toggle sorted class on click
+var addSortClass = function () {
   $(this).addClass('sorted');
   $(this).siblings().removeClass('sorted');
+};
+
+var appendSortedList = function () {
+  $('#leftList').empty();
+  sortedContacts.each( function (contact) {
+    var nameListTemplate = template.nameList(contact.attributes);
+    $('#leftList').append(nameListTemplate);
+  });
+};
+
+var lastNameSort = function () {
+  allContacts.fetch().done (function () {
+    allContacts.comparator = function(item) {
+      return item.get('lastName').toLowerCase();
+    };
+    sortedContacts = allContacts.sort();
+    appendSortedList();
+  });
+};
+
+var firstNameSort = function () {
+  allContacts.fetch().done( function () {
+    allContacts.comparator = function(item) {
+      return item.get('firstName').toLowerCase();
+    };
+    sortedContacts = allContacts.sort();
+    appendSortedList();
+  });
 };
 
 // Form submit listener
@@ -108,7 +149,18 @@ $('.main').on('click','#delete', deleteContact);
 $('ul').on('click', 'li', populateSC);
 
 // Sort button event listener
-$('.nameList').on('click', '.circle', sortContacts);
+$('.nameList').on('click', '.circle', addSortClass);
+
+// Sort by first name
+$('#firstNameSort').on('click', firstNameSort);
+
+// Sort by last name
+$('#lastNameSort').on('click', lastNameSort);
+
+// Enter http:// on focus of website input field
+$('#website').on('focus', function () {
+  $(this).val('http://');
+});
 
 
 // }());

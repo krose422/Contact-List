@@ -232,25 +232,45 @@ header {
 /* Contact Info Form
 --------------------- */
 
+
+
 .form {
-  // padding-top: 1em;
   margin-bottom: 2em;
   width: 100%;
   @include outer-container(90%);
   border-bottom: 1px solid $grey;
+
+  h4 {
+    font-size: 2em;
+    margin: .8em;
+    display: inline-block;
+    float: left;
+  }
+
+  .alert {
+    margin-top: .5em;
+    color: $red;
+    font-size: 1.7em;
+    float: left;
+    padding: .2em;
+    display: none;
+
+    i {
+      font-size: 1.8em;
+      padding-right: .2em;
+    }
+  }
+
+  .show {
+    display: inline-block;
+  }
 
 
   form {
     width: 100%;
     margin: auto;
     padding: 1.5em;
-
-    h4 {
-      font-size: 2em;
-      @include fill-parent();
-      margin-top: 0;
-      margin-bottom: .8em;
-    }
+    clear: both;
 
     .name {
       @include span-columns(3);

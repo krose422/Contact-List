@@ -173,15 +173,28 @@ header {
     clear: both;
     content: "";
     display: table; }
+  .form h4 {
+    font-size: 2em;
+    margin: .8em;
+    display: inline-block;
+    float: left; }
+  .form .alert {
+    margin-top: .5em;
+    color: #B63144;
+    font-size: 1.7em;
+    float: left;
+    padding: .2em;
+    display: none; }
+    .form .alert i {
+      font-size: 1.8em;
+      padding-right: .2em; }
+  .form .show {
+    display: inline-block; }
   .form form {
     width: 100%;
     margin: auto;
-    padding: 1.5em; }
-    .form form h4 {
-      font-size: 2em;
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: .8em; }
+    padding: 1.5em;
+    clear: both; }
     .form form .name {
       float: left;
       display: block;

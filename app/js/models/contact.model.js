@@ -4,17 +4,6 @@ var Contact = Backbone.Model.extend({
 
   },
 
-  idAttribute: '_id',
-
-  defaults: {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    addressOne: '',
-    addressTwo: '',
-    website: '',
-    additionalNotes: ''
-  }
+  idAttribute: '_id'
 
 });
