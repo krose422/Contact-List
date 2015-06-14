@@ -8,7 +8,7 @@ this["template"]["contactInfo"] = Handlebars.template({"compiler":[6,">= 2.0.0-b
     + alias3(((helper = (helper = helpers.firstName || (depth0 != null ? depth0.firstName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"firstName","hash":{},"data":data}) : helper)))
     + " "
     + alias3(((helper = (helper = helpers.lastName || (depth0 != null ? depth0.lastName : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"lastName","hash":{},"data":data}) : helper)))
-    + "</strong></p>\n            </div>\n\n            <div class=\"sc-avatar\" id=\"sc-avatar\">\n              <img src=\"images/User.png\">\n            </div>\n          </div> <!-- end sc-left -->\n\n          <div class=\"sc-middle\">\n\n            <div class=\"phone\" id=\"sc-phone\">\n              <p><strong>Phone Number: </strong><em>"
+    + "</strong></p>\n            </div>\n\n            <div class=\"sc-avatar\" id=\"sc-avatar\">\n              <div class=\"image\">\n                <img src=\"images/User.png\">\n              </div>\n              <div class=\"imageInputs\">\n                <input class=\"sc-imageupload\" type=\"file\" name=\"imagefilename\" accept=\"image/x-png, image/gif, image/jpeg\">\n                <input class=\"sc-imageupload\" type=\"submit\" value=\"Upload\">\n              </div>\n            </div>\n          <div id=\"delete\" class=\"delete\">\n            <p>Delete Contact</p>\n          </div>\n          </div> <!-- end sc-left -->\n\n          <div class=\"sc-middle\">\n\n            <div class=\"phone\" id=\"sc-phone\">\n              <p><strong>Phone Number: </strong><em>"
     + alias3(((helper = (helper = helpers.phone || (depth0 != null ? depth0.phone : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"phone","hash":{},"data":data}) : helper)))
     + "</em></p>\n            </div>\n\n            <div class=\"email\" id=\"sc-email\">\n              <p><strong>Email address: </strong><a href=\"mailto:"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
@@ -28,7 +28,7 @@ this["template"]["contactInfo"] = Handlebars.template({"compiler":[6,">= 2.0.0-b
     + alias3(((helper = (helper = helpers.addressOne || (depth0 != null ? depth0.addressOne : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressOne","hash":{},"data":data}) : helper)))
     + "%20"
     + alias3(((helper = (helper = helpers.addressTwo || (depth0 != null ? depth0.addressTwo : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"addressTwo","hash":{},"data":data}) : helper)))
-    + "%20&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos'></iframe>\n            </div>\n          </div>\n\n          <div id=\"delete\" class=\"delete\">\n            <p>Delete Contact</p>\n          </div>\n        </div>\n";
+    + "%20&key=AIzaSyC_VvHDNx8rh-aFYyqZ44TmRDZsdhchQos'></iframe>\n            </div>\n          </div>\n\n\n        </div>\n";
 },"useData":true});
 this["template"] = this["template"] || {};
 this["template"]["nameList"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

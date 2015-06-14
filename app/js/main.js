@@ -52,6 +52,7 @@ var addContact = function (e) {
     allContacts.add(contact).save().success( function (data) {
       addContactToList(data);
       addContactToSC(data);
+      highlightName();
     });
 
     this.reset();
@@ -76,7 +77,7 @@ var addContactToSC = function (d) {
 
 // Delete contact function
 var deleteContact = function () {
-  var contactToDelete = $(this).parent(),
+  var contactToDelete = $(this).parents('.sc'),
       idToDelete = contactToDelete.attr('id'),
       contactToDeleteList = $('.leftList').find('[data-id=' + idToDelete + ']');
   allContacts.get(idToDelete).destroy().success( function (data) {
@@ -166,7 +167,17 @@ $('#lastNameSort').on('click', lastNameSort);
 // Enter http:// on focus of website input field
 $('#website').on('focus', function () {
   $(this).val('http://');
+  // websiteEntry();
 });
+
+// var websiteEntry = function () {
+//   var el = $(this).get(0);
+//   var elemLength = el.value.length;
+
+//   el.selectionStart = elemLength;
+//   el.selectionEnd = elemLength;
+//   el.focus();
+// };
 
 
 // }());

@@ -7,7 +7,7 @@
 $stintfont: 'Stint Ultra Expanded', cursive;
 $pontanofont: 'Pontano Sans', sans-serif;
 
-$lightpurple: #995372;
+$lightpurple: #E37CA8;
 $purple: #844862;
 $darkpurple: #522D3D;
 $offwhite: #F2F2E9;
@@ -54,7 +54,6 @@ body {
   max-width: 100%;
   font-family: $pontanofont;
   color: $darkergrey;
-  // background-color: $offwhite;
 }
 
 input, button {
@@ -70,7 +69,14 @@ input, button {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: $lightpurple;
 
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 /* HEADER
 ---------- */
@@ -130,7 +136,6 @@ header {
 --------------------------- */
 
 .nameList {
-  height: 100vh;
   background-color: $darkgrey;
   @include span-columns(3);
 
@@ -143,9 +148,11 @@ header {
 
   .sort {
     padding-left: 1em;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     margin: 2em 1em;
+    border-bottom: 1px solid $offwhite;
+    padding-bottom: 2em;
   }
 
   .circle {
@@ -185,23 +192,47 @@ header {
     li {
       margin: 0;
       padding: .5em;
+      padding-left: 1em;
       cursor: pointer;
       @include transition;
+      position: relative;
 
       &:hover {
         background-color: $offwhite;
         opacity: .7;
         color: $darkergrey;
       }
-
     }
 
     .selected {
       background-color: $offwhite;
       opacity: .7;
       color: $darkergrey;
+      padding-left: 2em;
+
+      &::before {
+        font-family: FontAwesome;
+        content: '\f138';
+        position: absolute;
+        left: 16px;
+        top: 13px;
+        color: $purple;
+      }
+
     }
   }
+
+  footer {
+    overflow: hidden;
+    background-color: $darkergrey;
+    font-size: .8em;
+    height: 40px;
+    padding: .3em;
+  }
+}
+
+.noFoot {
+  height: calc(100vh - 143px);
 }
 
 /* SORT STYLE
@@ -341,11 +372,42 @@ header {
       p {
         margin-top: 0;
         margin-bottom: 1em;
+        margin: auto;
+        text-align: center;
       }
     }
 
     .sc-avatar {
-      padding-top: 2em;
+      margin-top: 2em;
+
+      .image {
+        height: 10em;
+        width: 10em;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $offwhite;
+        margin: auto;
+        margin-bottom: 3em;
+
+        img {
+          padding: 0;
+          height: 11.5em;
+        }
+      }
+    }
+
+    .sc-imageupload {
+      border-radius: 4px;
+      color: $darkergrey;
+      border: none;
+      display: block;
+      padding: .3em;
+      font-size: 1em;
+      @include transition;
+      background-color: $offwhite;
+      @include border($grey);
+      width: 80%;
+      margin: 1em;
     }
   }
 
@@ -379,7 +441,7 @@ header {
     color: $offwhite;
     margin: auto;
     cursor: pointer;
-    margin-left: 0;
+    margin-left: .5em;
 
     &:hover {
       background-color: $red;

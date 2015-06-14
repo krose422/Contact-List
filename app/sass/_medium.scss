@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) and (max-width: 1100px) {
+@media screen and (min-width: 900px) and (max-width: 1100px) {
 
 
 /* Contact Info Form
@@ -6,14 +6,16 @@
 
 .form {
 
+  border: none;
   @include span-columns(3 of 9);
 
-  form {
+  h4 {
+    font-size: 2em;
+    @include fill-parent();
+    margin-bottom: 0;
+  }
 
-    h4 {
-      font-size: 2em;
-      @include fill-parent();
-    }
+  form {
 
     .name {
       @include fill-parent;
@@ -40,7 +42,60 @@
 .selectedContact {
   @include span-columns(6 of 9);
   clear: none;
-  margin-top: 4em;
+  margin-top: 1em;
+
+  .sc-left {
+    @include span-columns(6);
+
+    .sc-fullname {
+      font-size: 2em;
+    }
+
+    .sc-avatar {
+      margin-top: 1em;
+
+      .image {
+        height: 7em;
+        width: 7em;
+        margin-bottom: 1em;
+
+        img {
+          height: 8.2em;
+        }
+      }
+
+      .sc-imageupload {
+        width: 35%;
+        margin: auto;
+        margin-bottom: 1em;
+      }
+    }
+
+    .delete {
+      margin: auto;
+      width: 12em;
+      height: 3em;
+
+      p {
+        font-size: 1.3em;
+        padding: 6px;
+      }
+    }
+  }
+
+  .sc-middle {
+    @include span-columns(6);
+    @include omega();
+    margin-top: .5em;
+  }
+
+  .sc-right {
+    @include fill-parent;
+
+    .googlemap {
+      margin-top: 2em;
+    }
+  }
 }
 
 
