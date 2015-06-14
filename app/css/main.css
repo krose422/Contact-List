@@ -323,6 +323,8 @@ header {
         .selectedContact .sc-left .sc-avatar .image img {
           padding: 0;
           height: 11.5em; }
+    .selectedContact .sc-left .imageInputs {
+      width: 100%; }
     .selectedContact .sc-left .sc-imageupload {
       border-radius: 4px;
       color: #5C5251;
@@ -335,14 +337,15 @@ header {
       border: 1px solid #D9D7C5;
       border-radius: .3em;
       width: 80%;
-      margin: 1em; }
+      margin: auto;
+      margin-bottom: 1em; }
   .selectedContact .sc-middle {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
     overflow: hidden;
-    margin-top: 25px;
+    margin-top: -8px;
     font-size: 1.4em; }
     .selectedContact .sc-middle:last-child {
       margin-right: 0; }
@@ -369,7 +372,8 @@ header {
     color: #F2F2E9;
     margin: auto;
     cursor: pointer;
-    margin-left: .5em; }
+    margin: auto;
+    margin-top: 1em; }
     .selectedContact .delete:hover {
       background-color: #B63144; }
     .selectedContact .delete p {

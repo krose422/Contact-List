@@ -396,6 +396,10 @@ header {
       }
     }
 
+    .imageInputs {
+      width: 100%;
+    }
+
     .sc-imageupload {
       border-radius: 4px;
       color: $darkergrey;
@@ -407,14 +411,15 @@ header {
       background-color: $offwhite;
       @include border($grey);
       width: 80%;
-      margin: 1em;
+      margin: auto;
+      margin-bottom: 1em;
     }
   }
 
   .sc-middle {
     @include span-columns(3);
     overflow: hidden;
-    margin-top: 25px;
+    margin-top: -8px;
     font-size: 1.4em;
   }
 
@@ -441,7 +446,8 @@ header {
     color: $offwhite;
     margin: auto;
     cursor: pointer;
-    margin-left: .5em;
+    margin: auto;
+    margin-top: 1em;
 
     &:hover {
       background-color: $red;
