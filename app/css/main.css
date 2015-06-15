@@ -160,7 +160,7 @@ header {
     padding: .3em; }
 
 .noFoot {
-  height: calc(100vh - 140px); }
+  height: calc(100vh - 40px); }
 
 /* SORT STYLE
 -------------- */
