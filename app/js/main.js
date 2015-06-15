@@ -110,7 +110,7 @@ var addSortClass = function () {
 var appendSortedList = function () {
   $('#leftList').empty();
   sortedContacts.each( function (contact) {
-    var nameListTemplate = template.nameList(contact.attributes);
+    var nameListTemplate = template.nameList(contact.toJSON());
     $('#leftList').append(nameListTemplate);
   });
 };
